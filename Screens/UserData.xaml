@@ -1,0 +1,102 @@
+﻿<Page
+    x:Class="TicTacToe.Screens.UserData"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TicTacToe.Screens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="LightSkyBlue" Name="Board">
+        <StackPanel            
+               Orientation="Vertical" 
+               Width="1592"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" Height="556">
+
+            <Button    
+               Content="Back"
+               HorizontalAlignment="Left"
+               Tapped="GoBack" 
+               Margin="0,0,0,0">
+            </Button>
+
+            <TextBlock 
+                x:Name="textBoxForPlayer1"
+                Text="Player 1, enter your name"
+                HorizontalAlignment="Center" 
+                FontSize="64" 
+            />
+
+            <TextBox 
+            	x:Name="user1NameInput"
+            	Width="568" 
+            	HorizontalAlignment="Center"
+            	Background="White"
+                Height="45"
+                Margin="0,40,0,0"/>
+
+            <StackPanel
+                Orientation="Horizontal"
+                Width="500"
+                >
+                <Button
+            	x:Name="GreenColor"
+            	Background="Green"
+            	Tapped="SelectGreen"
+            	HorizontalAlignment="Center"
+            	Height="20"
+            	Width="50"
+                />
+                
+                <Button
+            	x:Name="VioletColor"
+            	Background="DarkViolet"
+            	Tapped="SelectViolet"
+            	HorizontalAlignment="Right"
+            	Height="20"
+            	Width="50"
+                />
+                
+                <Button
+            	x:Name="CoralColor"
+            	Background="Coral"
+            	Tapped="SelectCoral"
+            	HorizontalAlignment="Left"
+            	Height="20"
+            	Width="50"
+                />
+            </StackPanel>
+           
+
+            <TextBlock 
+                x:Name="textBoxForPlayer2"
+                Text="Player 2, enter your name"
+                HorizontalAlignment="Center" 
+                FontSize="64" 
+                Margin="0,40,0,0"
+                Visibility="Collapsed" />
+           
+            <TextBox 
+            		x:Name="user2NameInput" 
+            		Width="568" 
+            		HorizontalAlignment="Center"
+                    Background="White" 
+                    Height="45"
+                    Margin="0,40,0,0"
+                    Visibility="Collapsed" />
+
+            <Button
+            x:Name="startTheGame"
+            Content="Start"
+            Tapped="StartTheGame"
+            HorizontalAlignment="Center" 
+            Height="64" 
+            Margin="0,40,0,0" 
+            Width="123">
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
